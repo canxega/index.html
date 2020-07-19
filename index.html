@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Diego Velázquez">
+  <meta name="description" content="Como crear una página web moderna - Webook">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Spartan:300,700&display=swap" rel="stylesheet">
+
+  <!-- Ionic icons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <title>Mi primer pagina web | Webook</title>
+</head>
+
+<body class="position-relative">
+  <div class="row no-gutters">
+    <div class="col-lg-1 menu border-right d-flex z-index-top">
+      <div class="align-self-center mx-auto">
+        <div id="open">
+          <a href="#" id="open-icon"><i class="icon ion-md-menu display-4 text-light mx-auto" onclick="showMenu()"></i></a>
+        </div>
+        <div id="close">
+          <a href="#" id="close-icon"><i class="icon ion-md-close display-4 text-light mx-auto" onclick="hideMenu()"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="col-lg-11">
+      <section class="d-flex">
+        <div class="container align-self-center">
+          <div class="hero w-75">
+            <h1 class="display-4 text-light mb-4">Biograrfia
+              <span class="font-weight-bold">Carlos Galindo</span></h1>
+            <p class="lead text-uppercase text-light mb-5">mi nombre es Carlos Galindo, naci en Quetzaltenango en el 90. Al rededor del mes de junio del 2013 me mude a jutiapa
+              actualmente trabajo en ciberdefensa.
+            </p>
+            <a href="https://www.facebook.com/krlos.galindo1" class="btn btn-outline-light font-weight-bold rounded-0 py-3 px-4 mb-5">Contáctanos ahora</a>
+            <ul class="list-inline">
+              <li class="list-inline-item mr-5"><a href="https://www.facebook.com/krlos.galindo1" class="text-light"><i
+                    class="icon ion-logo-facebook lead mr-2"></i> Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="bg-image-1 position-relative">
+        <div class="title text-light position-absolute">
+          <h1>Video <span class="font-weight-bold">Musica</span></h1>
+          <p class="mb-4">que inspira</p>
+          <a href="https://youtu.be/dpmAY059TTY" class="font-weight-bold text-light">muy buena <i
+              class="icon ion-md-arrow-forward lead align-middle ml-2"></i></a>
+        </div>
+        </section>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8SbUC-UaAxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+       <footer class="border-top py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <small class="text-muted">© 2019 <a href="https://webook.mx/" class="text-muted" target="_blank">Webook</a></small>
+            </div>
+            <div class="col-lg-6 text-right">
+              <small><a href="mailto:contacto@webook.mx" class="text-muted">contacto@webook.mx</a></small>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="menu-overlay" class="position-absolute d-flex h-100 bg-dark w-100">
+    <div id="menu-content" class="align-self-center w-75 mx-auto text-center">
+    <h1 class="display-3 text-light align-self-center">Las ideas se vuelven <span class="font-weight-bold">realidad</span>.</h1>
+    <a href="#" class="lead text-light"></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    <a href="https://www.w3schools.com/">Tutoriales de html5 en w3s<br></a>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+<script>
+
+function showMenu() {
+  document.getElementById('content').style.overflowY = "hidden";
+  document.getElementById('open-icon').style.opacity = "0";
+  document.getElementById('menu-overlay').style.cssText = "opacity: 1; z-index: 1005;";
+  setTimeout(function(){
+      document.getElementById('open').style.display = "none";
+      document.getElementById('close').style.display = "block";
+      document.getElementById('menu-content').style.opacity = "1";
+  }, 1000);
+  setTimeout(function(){
+      document.getElementById('close-icon').style.opacity = "1";
+  }, 1100);
+}
+
+function hideMenu() {
+  document.getElementById('content').style.overflowY = "auto";
+  document.getElementById('close-icon').style.opacity = "0";
+  document.getElementById('menu-content').style.opacity = "0";
+  setTimeout(function(){
+      document.getElementById('close').style.display = "none";
+      document.getElementById('open').style.display = "block";
+      document.getElementById('menu-overlay').style.cssText = "opacity: 0; z-index: unset;";
+  }, 1000);
+  setTimeout(function(){
+      document.getElementById('open-icon').style.opacity = "1";
+  }, 1100);
+}
+
+</script>
+
+</html>
